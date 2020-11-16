@@ -1,0 +1,160 @@
+
+
+.card{
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  display: flex;
+  height: 4rem;
+  width: 12.5rem;
+  margin: 2rem 0 0 1rem;
+  border-radius: 4px;
+  position: relative;
+  z-index: 5;
+
+ 
+
+  &:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+
+  .todo__container{
+    position: relative;
+    width: 18rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    
+    
+  }
+
+  .form__text,
+  input[type='text']{
+    display: flex;
+    height: 5rem;
+    width: 100%;
+    position: absolute;
+    align-items: center;
+    text-align: center;
+    top: 0;
+    left: 0;
+    margin: 0;
+    z-index: 10;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+  }
+
+  .update-icon{
+    position: absolute;
+    font-size: 1.5rem;
+    right: 5%;
+    top: 5%;
+    color: #515070;
+    cursor: pointer;
+  }
+
+  .submit-icon{
+    position: absolute;
+    font-size: 2rem;
+    right: 5%;
+    top: 0%;
+    z-index: 100;
+    color: #438285;
+    cursor: pointer;
+  }
+  .utilities__container{
+    background-color: #ffc38b;
+    border-radius: 0 4px 4px 0;
+    width: 8rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+
+
+
+  }
+  .remainingdays__container{
+    font-size: 2.5rem;
+
+    span {
+      font-size: 0.5rem;
+      padding-left: 0.1rem;
+      padding-right: 0.1rem;
+    }
+    transition: all 0.5s ease;
+  }
+
+  .icon__container{
+    text-align: center;
+    transition: all 0.5s ease;
+  }
+
+  .status__container{
+    position: absolute;
+    bottom: -35%;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transition: all 400ms 200ms ease;
+
+    opacity: 0;
+    transform: translateY(-5px);
+    z-index: 1;
+    cursor: pointer;
+  }
+  .status__changable{
+    display: flex;
+    
+  }
+
+  .change_status__container:not(:first-of-type){
+    margin-left: 0.3rem;
+  }
+
+  .change_status__container{
+    padding: 0.2rem;
+    border-radius: 4px;
+    font-size: 0.5rem;
+    color: #fff;
+    max-width: 2.5rem;
+    max-height: 1.5rem;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+
+  }
+   .change_status-todo {
+    background: #98e4f6;
+
+  }
+  .change_status-doing {
+    background: #81b214;
+
+  }
+
+  .change_status-done{
+    background: #ffc93c;
+  }
+  .change_status-delete{
+    background: #cd0a0a;
+    margin-left: auto;
+  }
+
+  &:hover  .status__container{
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@media screen and (max-width: 992px ){
+  .card {
+    height: 3rem;
+    width: 10rem;
+    .todo__card{
+      width: 15rem;
+    }
+  }
+}
